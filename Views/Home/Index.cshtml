@@ -1,0 +1,38 @@
+﻿@model List<Blog.Models.Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="container">
+        <header class="mb-5">
+            <h1 class="text-center mb-4">@ViewData["Title"]</h1>
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <a class="btn btn-primary" asp-controller="Product" asp-action="Create">New Product</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="row">
+                @foreach (var product in Model)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="/products/@product.ImageFileName" class="card-img-top" alt="Product Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">@product.Name</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">@product.Category</h6>
+                                <p class="card-text">@product.Description</p>
+                                <p class="card-text"><small class="text-muted">Created on @product.CreateAt.ToString("yyyy-MM-dd")</small></p>
+                                <a class="btn btn-info" asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id">Edit</a>
+                                <a class="btn btn-danger" asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </main>
+    </div>
+
+

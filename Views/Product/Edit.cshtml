@@ -1,0 +1,65 @@
+﻿@model Blog.Models.ProductDto
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<h1 class="text-center mb-5">@ViewData["Title"]</h1>
+
+<!-- Display existing product details -->
+<div class="mb-4">
+    <h4>Product Details:</h4>
+    <p><strong>ID:</strong> @ViewData["ProductId"]</p>
+    <p><strong>Created At:</strong> @ViewData["CreatedAt"]</p>
+    @if (!string.IsNullOrEmpty(ViewData["ImageFileName"] as string))
+    {
+        <p><strong>Current Image:</strong></p>
+        <img src="@Url.Content("~/products/" + ViewData["ImageFileName"])" alt="Current Image" style="max-width: 300px; height: auto;" />
+    }
+</div>
+
+<!-- Form to edit product -->
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="Id" value="@ViewData["ProductId"]" />
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" value="@Model.Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Category" class="control-label"></label>
+        <select asp-for="Category" class="form-control">
+            <option value="Electronics" >Electronics</option>
+            <option value="Books" >Books</option>
+            <option value="Clothing" >Clothing</option>
+            <option value="Home" >Home & Kitchen</option>
+            <option value="Sports" >Sports & Outdoors</option>
+        </select>
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <textarea asp-for="Description" class="form-control">@Model.Description</textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageFile" class="control-label"></label>
+        <input asp-for="ImageFile" type="file" class="form-control" />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-controller="Product" asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

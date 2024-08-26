@@ -1,0 +1,47 @@
+﻿@model List<Blog.Models.Product>
+
+@{
+    ViewData["Title"] = "List of Products";
+}
+
+<h1 class="text-center mb-5">@ViewData["Title"]</h1>
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" asp-controller="Product" asp-action="Create">New Product</a>
+    </div>
+    <div class="col">
+            <!-- You can add additional controls here if needed -->
+    </div>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Image File Name</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Category</td>
+                    <td>@product.Description</td>
+                        <td><img src="/products/@product.ImageFileName" width="100px"/></td>
+                    <td>@product.CreateAt.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        <a class="btn btn-sm btn-info" asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id">Edit</a>
+                        <a class="btn btn-sm btn-danger" asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id">Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
