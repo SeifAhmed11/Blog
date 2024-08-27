@@ -5,10 +5,10 @@
 
     <div class="container">
         <header class="mb-5">
-            <h1 class="text-center mb-4">@ViewData["Title"]</h1>
+            <h1 class="text-center mb-4">Blogs</h1>
             <div class="row mb-4">
                 <div class="col text-center">
-                    <a class="btn btn-primary" asp-controller="Product" asp-action="Create">New Product</a>
+                <a class="btn btn-light" asp-controller="Product" asp-action="Create">New Product</a>
                 </div>
             </div>
         </header>
@@ -17,7 +17,7 @@
             <div class="row">
                 @foreach (var product in Model)
                 {
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-12 mb-4">
                         <div class="card">
                             <img src="/products/@product.ImageFileName" class="card-img-top" alt="Product Image" />
                             <div class="card-body">

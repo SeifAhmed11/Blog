@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YqiEYmTUKYS2SFcqaiWGoLJFgZZcgLKihKelraK8Vok=",
+  "Hash": "GQsedgeLrQslmy0oHa2DYXtirxAfEJwcg03WcX0sb6Y=",
   "Source": "Blog",
   "BasePath": "_content/Blog",
   "Mode": "Default",
@@ -1214,6 +1214,25 @@
       "OriginalItemSpec": "wwwroot\\products\\Blog-1-1024x683_0c24b056-8960-4873-b2f3-e8b166765eb1.jpg"
     },
     {
+      "Identity": "D:\\project\\Blog\\Blog\\wwwroot\\products\\images (5)_5c8a9384-a443-465e-9ed0-30c49acf90fd.jpg",
+      "SourceId": "Blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\project\\Blog\\Blog\\wwwroot\\",
+      "BasePath": "_content/Blog",
+      "RelativePath": "products/images (5)_5c8a9384-a443-465e-9ed0-30c49acf90fd.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\products\\images (5)_5c8a9384-a443-465e-9ed0-30c49acf90fd.jpg"
+    },
+    {
       "Identity": "D:\\project\\Blog\\Blog\\wwwroot\\products\\img1.jpg",
       "SourceId": "Blog",
       "SourceType": "Discovered",
@@ -1231,25 +1250,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\products\\img1.jpg"
-    },
-    {
-      "Identity": "D:\\project\\Blog\\Blog\\wwwroot\\products\\Mask group (1)_3beb4eb9-0aa4-460d-8f57-4ba60e4c5f4f.png",
-      "SourceId": "Blog",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\Blog\\Blog\\wwwroot\\",
-      "BasePath": "_content/Blog",
-      "RelativePath": "products/Mask group (1)_3beb4eb9-0aa4-460d-8f57-4ba60e4c5f4f.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\products\\Mask group (1)_3beb4eb9-0aa4-460d-8f57-4ba60e4c5f4f.png"
     }
   ]
 }

@@ -19,7 +19,7 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: linear-gradient(135deg, #3b007b, #e2e2e2);
+    background: #000d37;
     color: #333;
     font-family: 'Arial', sans-serif;
 }
@@ -47,18 +47,19 @@ header h1 {
 }
 
 .btn-info {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+    background-color: #ffa3b2;
+    border-color: #ffa3b2;
 }
 
-    .btn-info:hover {
-        background-color: #138496;
-        border-color: #117a8b;
-    }
+.btn-info:hover {
+    background-color: #000d37;
+    border-color: #000d37;
+    color: #fff;
+}
 
 .btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
+    background-color: #000000;
+    border-color: #000000;
 }
 
 .btn-danger:hover {
@@ -84,7 +85,7 @@ form {
 }
 
 nav.navbar.navbar-expand-sm.navbar-toggleable-sm.navbar-light.bg-white.border-bottom.box-shadow.mb-3 {
-    background: #9c41ff !important;
+    background: #ffa3b2 !important;
 }
 
 footer.border-top.footer.text-muted *, h4, p, td {
@@ -92,5 +93,17 @@ footer.border-top.footer.text-muted *, h4, p, td {
 }
 
 th {
-    color: #320068 !important;
+    color: #ff0000 !important;
 }
+
+img.card-img-top {
+    min-height: 543px;
+    border-radius: 29px !important;
+}
+
+.card {
+    border-radius: 30px !important;
+    overflow: hidden;
+    padding: 30px;
+}
+
